@@ -1,0 +1,9 @@
+
+[
+java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(³ντ£όÿÿÿÿ
+e
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(υ¤σΖϋÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'com.dao.EmployeeDao'.(ÒΦ
+k
+java:S1192"IDefine a constant instead of duplicating this literal "employee" 3 times.(®Ώ™ύÿÿÿÿ8ΠΨΤ€ς/
