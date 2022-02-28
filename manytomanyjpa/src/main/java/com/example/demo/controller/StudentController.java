@@ -27,10 +27,23 @@ public class StudentController {
     }
 
     @GetMapping("/javastudents")
-    public List<Student> getStudents(){
+    public List<Student> getJavaStudents(){
         List<Student> list= this.studentService.findJavaStudent();
 
-        System.out.println(list);
+        return list;
+    }
+
+    @GetMapping("/pythonstudents")
+    public List<Student> getPythonStudents(){
+        List<Student> list= this.studentService.findPythonStudent();
+
+        return list;
+    }
+
+    @GetMapping("/nebulastudents")
+    public List<Student> getNebulaStudents(){
+        List<Student> list= this.studentService.findNebulaStudent();
+
         return list;
     }
 

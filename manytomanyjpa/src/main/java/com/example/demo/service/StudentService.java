@@ -37,7 +37,17 @@ public class StudentService implements com.example.demo.service.Service {
     }
 
     public List<Student> findJavaStudent(){
+        List<Student> list=this.studentRepository.findAllByCourseName("java");
+        return list;
+    }
+
+    public List<Student> findPythonStudent(){
         List<Student> list=this.studentRepository.findAllByCourseName("python");
+        return list;
+    }
+
+    public List<Student> findNebulaStudent(){
+        List<Student> list=this.studentRepository.findAllByCourseName("nebula");
         return list;
     }
 }
