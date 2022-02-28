@@ -15,7 +15,7 @@ public class Employee {
     private String designation;
     private double salary;
 
-//    @ManyToMany(cascade = CascadeType.ALL)
+//    @ManyToMany(cascade = CascadeType.ALL,mappedBy = "employees")
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "employees")
     @JsonManagedReference
     private List<Projects> projects;

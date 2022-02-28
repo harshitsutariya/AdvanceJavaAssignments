@@ -5,5 +5,5 @@ e
 java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(õ¤óÆûÿÿÿÿ
 F
 java:S1128"0Remove this unused import 'com.dao.EmployeeDao'.(ÒÖ
-k
-java:S1192"IDefine a constant instead of duplicating this literal "employee" 3 times.(®¿™ıÿÿÿÿ8ĞØÔ€ò/
+d
+java:S1192"IDefine a constant instead of duplicating this literal "employee" 3 times.(®¿™ıÿÿÿÿ

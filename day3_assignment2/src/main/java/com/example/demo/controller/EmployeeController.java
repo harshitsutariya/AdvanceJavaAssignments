@@ -1,11 +1,14 @@
 package com.example.demo.controller;
 
+import com.example.demo.employeeDTO.DTOconverter;
+import com.example.demo.employeeDTO.EmployeeDTO;
 import com.example.demo.model.Employee;
 import com.example.demo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class EmployeeController {
@@ -13,16 +16,21 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
+    @Autowired
+    private DTOconverter dtOconverter;
+
     @GetMapping("/employees")
-    public List<Employee> getAllEmployee(){
+    public List<EmployeeDTO> getAllEmployee(){
         List<Employee> list= this.employeeService.getAllEmp();
-        return list;
+
+        return dtOconverter.returnDTO(list);
     }
 
     @GetMapping("/employees/{id}")
-    public Employee getEmployeeById(@PathVariable("id") int id){
-        Employee employee=this.employeeService.getEmpById(id);
-        return employee;
+    public EmployeeDTO getEmployeeById(@PathVariable("id") int id) {
+        Employee employee= this.employeeService.getEmpById(id);
+
+        return dtOconverter.entityToDTO(employee);
     }
 
     @PostMapping("/employees")
